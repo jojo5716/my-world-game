@@ -25,6 +25,9 @@ public class KeywordWalk : MonoBehaviour {
             // Set animation player
             anim.SetFloat("movX", mov.x);
             anim.SetFloat("movY", mov.y);
+            anim.SetBool("walking", true);
+        } else {
+            anim.SetBool("walking", false);
         }
     }
 

@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class KeywordWalk : MonoBehaviour {
     public float speed = 4f;
+    Animator anim;
+    Rigidbody2D rb2d;
+    Vector2 mov;
 
     // Start is called before the first frame update
     void Start() {
-        
+        anim = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update() {
-        Vector3 movement = new Vector3(
+        mov = new Vector2(
             Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"),
-            0
+            Input.GetAxisRaw("Vertical")
         );
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            transform.position + movement,
-            speed * Time.deltaTime
-        );
+        // Set animation player
+        anim.SetFloat("movX", mov.x);
+        anim.SetFloat("movY", mov.y);
+    }
+
+    void FixedUpdate() {
+        // Move chatacter with physics.
+        rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
     }
 }

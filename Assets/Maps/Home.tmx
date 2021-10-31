@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="6">
  <tileset firstgid="1" source="../Sprites/Overworld/Overworld.tsx"/>
  <group id="2" name="Floor">
   <layer id="1" name="BackgroundGrass" width="50" height="50">
@@ -59,7 +59,6 @@
  </group>
  <group id="3" name="Houses">
   <group id="6" name="Principal">
-   <group id="5" name="Collisions"/>
    <layer id="4" name="House" width="50" height="50">
     <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -114,6 +113,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
    </layer>
+   <group id="5" name="Collisions">
+    <objectgroup id="7" name="Collision" offsetx="0.25" offsety="0.75">
+     <object id="5" x="90.5" y="391">
+      <polygon points="-3.5,-3.25 -4.75,-18.25 -5,-19.75 -3.25,-54.75 28.5,-71 50.2877,-62.4136 64.75,-54.25 63,-48.5 65.25,-20.5 65.5,-19.75 63.75,-2.25 41.5,-3 40,-22.25 17.75,-22 18.75,-3.75"/>
+     </object>
+    </objectgroup>
+   </group>
   </group>
  </group>
 </map>

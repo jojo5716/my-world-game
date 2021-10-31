@@ -21,9 +21,11 @@ public class KeywordWalk : MonoBehaviour {
             Input.GetAxisRaw("Vertical")
         );
 
-        // Set animation player
-        anim.SetFloat("movX", mov.x);
-        anim.SetFloat("movY", mov.y);
+        if (mov != Vector2.zero) {
+            // Set animation player
+            anim.SetFloat("movX", mov.x);
+            anim.SetFloat("movY", mov.y);
+        }
     }
 
     void FixedUpdate() {
